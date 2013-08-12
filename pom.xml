@@ -7,12 +7,20 @@
   <version>0.1.0</version>
 
   <name>wiperdog parent pom</name>
-
+  <description>parent pom for building wiperdog artifacts.</description>
   <packaging>pom</packaging>
-
-  <distributionManagement>
-  </distributionManagement>
-
+  <url>http://www.wiperdog.org/</url>
+  <licenses>
+    <license>
+      <name>The Apache Software License, Version 2.0</name>
+      <url>http://www.apache.org/licenses/LICENSE-2.0.txt</url>
+      <distribution>repo</distribution>
+    </license>
+  </licenses>
+  <scm>
+    <url>scm:git:https://github.com/wiperdog/parent.git</url>
+    <connection>scm:git:https://github.com/wiperdog/parent.git</connection>
+  </scm>
   <build>
     <extensions>
       <extension>
@@ -47,5 +55,36 @@
       </plugin>
     </plugins>
   </build>
-
+  <profiles>
+    <profile>
+       <id>release-sign-artifacts</id>
+       <activation>
+          <property>
+             <name>performRelease</name>
+             <value>true</value>
+          </property>
+       </activation>
+       <properties>
+         <gpg.keyname>2FA74112</gpg.keyname>
+       </properties>
+       <build>
+         <plugins>
+           <plugin>
+             <groupId>org.apache.maven.plugins</groupId>
+             <artifactId>maven-gpg-plugin</artifactId>
+             <version>1.1</version>
+             <executions>
+               <execution>
+                 <id>sign-artifacts</id>
+                 <phase>verify</phase>
+                 <goals>
+                   <goal>sign</goal>
+                 </goals>
+               </execution>
+             </executions>
+           </plugin>
+         </plugins>
+       </build>
+     </profile>
+   </profiles>
 </project>

@@ -20,6 +20,7 @@
   <scm>
     <url>scm:git:https://github.com/wiperdog/parent.git</url>
     <connection>scm:git:https://github.com/wiperdog/parent.git</connection>
+    <developerConnection>scm:git:https://github.com/wiperdog/parent.git</developerConnection>
   </scm>
   <build>
     <extensions>
@@ -62,10 +63,12 @@
         <artifactId>maven-release-plugin</artifactId>
         <version>2.4.1</version>
         <configuration>
-          <goals>deploy</goals>
+          <goals>install</goals>
           <pushChanges>false</pushChanges>
           <localCheckout>true</localCheckout>
           <mavenExecutorId>forked-path</mavenExecutorId>
+          <allowTimestampedSnapshots>true</allowTimestampedSnapshots>
+          <tagNameFormat>v@{project.version}</tagNameFormat>
         </configuration>
       </plugin>
     </plugins>

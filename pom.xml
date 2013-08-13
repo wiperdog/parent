@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://maven.apache.org/POM/4.0.0" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
 
   <parent>
     <groupId>org.sonatype.oss</groupId>
@@ -10,7 +10,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>org.wiperdog</groupId>
   <artifactId>wiperdog-parent</artifactId>
-  <version>0.1.0-SNAPSHOT</version>
+  <version>0.1.0</version>
 
   <name>wiperdog parent pom</name>
   <description>parent pom for building wiperdog artifacts.</description>
@@ -27,6 +27,7 @@
     <url>scm:git:https://github.com/wiperdog/parent.git</url>
     <connection>scm:git:https://github.com/wiperdog/parent.git</connection>
     <developerConnection>scm:git:https://github.com/wiperdog/parent.git</developerConnection>
+    <tag>v0.1.0</tag>
   </scm>
   <build>
     <extensions>

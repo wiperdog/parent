@@ -10,7 +10,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>org.wiperdog</groupId>
   <artifactId>wiperdog-parent</artifactId>
-  <version>0.1.1-SNAPSHOT</version>
+  <version>0.1.1</version>
 
   <name>wiperdog parent pom</name>
   <description>parent pom for building wiperdog artifacts.</description>
@@ -27,7 +27,7 @@
     <url>scm:git:https://github.com/wiperdog/parent.git</url>
     <connection>scm:git:https://github.com/wiperdog/parent.git</connection>
     <developerConnection>scm:git:https://github.com/wiperdog/parent.git</developerConnection>
-    <tag>HEAD</tag>
+    <tag>v0.1.1</tag>
   </scm>
   <build>
     <extensions>
